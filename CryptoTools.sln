@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CryptoTools", "CryptoTools\CryptoTools.shproj", "{67677DC9-0157-4CED-AA6C-D7C1A9D7B33D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PasswordToolsDll", "PasswordToolsDll", "{15F3873B-D793-415B-8E7A-1B32B709861E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordGenerator", "PasswordToolsDll\PasswordGenerator\PasswordGenerator.csproj", "{FD953347-4ADA-4B07-A06A-6594DE8E32DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordSave", "PasswordToolsDll\PasswordSave\PasswordSave.csproj", "{7E4E435F-2A8A-4639-8153-571758D95115}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTools", "ConsoleTools\ConsoleTools.csproj", "{9D3564D6-B424-40D4-9423-3BDD8C406B6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CryptoToolsDll", "CryptoToolsDll", "{16F3B550-0592-468C-A6A8-54D44C64F02C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptFiles", "CryptoToolsDll\CryptFiles\CryptFiles.csproj", "{E6858565-800B-42D4-8A36-549AA4F6497A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecryptFiles", "CryptoToolsDll\DecryptFiles\DecryptFiles.csproj", "{BCCDEB46-BA1A-4996-8665-0B9ABAF2C047}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CryptoTools\CryptoTools.projitems*{67677dc9-0157-4ced-aa6c-d7c1a9d7b33d}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD953347-4ADA-4B07-A06A-6594DE8E32DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD953347-4ADA-4B07-A06A-6594DE8E32DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD953347-4ADA-4B07-A06A-6594DE8E32DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD953347-4ADA-4B07-A06A-6594DE8E32DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E4E435F-2A8A-4639-8153-571758D95115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E4E435F-2A8A-4639-8153-571758D95115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E4E435F-2A8A-4639-8153-571758D95115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E4E435F-2A8A-4639-8153-571758D95115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D3564D6-B424-40D4-9423-3BDD8C406B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D3564D6-B424-40D4-9423-3BDD8C406B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D3564D6-B424-40D4-9423-3BDD8C406B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D3564D6-B424-40D4-9423-3BDD8C406B6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6858565-800B-42D4-8A36-549AA4F6497A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6858565-800B-42D4-8A36-549AA4F6497A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6858565-800B-42D4-8A36-549AA4F6497A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6858565-800B-42D4-8A36-549AA4F6497A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCCDEB46-BA1A-4996-8665-0B9ABAF2C047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCCDEB46-BA1A-4996-8665-0B9ABAF2C047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCCDEB46-BA1A-4996-8665-0B9ABAF2C047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCCDEB46-BA1A-4996-8665-0B9ABAF2C047}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FD953347-4ADA-4B07-A06A-6594DE8E32DE} = {15F3873B-D793-415B-8E7A-1B32B709861E}
+		{7E4E435F-2A8A-4639-8153-571758D95115} = {15F3873B-D793-415B-8E7A-1B32B709861E}
+		{E6858565-800B-42D4-8A36-549AA4F6497A} = {16F3B550-0592-468C-A6A8-54D44C64F02C}
+		{BCCDEB46-BA1A-4996-8665-0B9ABAF2C047} = {16F3B550-0592-468C-A6A8-54D44C64F02C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CA5DBA7-4C7B-4BCE-9C79-B4E85D873283}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\bin\Debug\netcoreapp2.2\ConsoleTools.deps.json
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\bin\Debug\netcoreapp2.2\ConsoleTools.runtimeconfig.json
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\bin\Debug\netcoreapp2.2\ConsoleTools.runtimeconfig.dev.json
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\bin\Debug\netcoreapp2.2\ConsoleTools.dll
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\bin\Debug\netcoreapp2.2\ConsoleTools.pdb
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\bin\Debug\netcoreapp2.2\PasswordGenerator.dll
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\bin\Debug\netcoreapp2.2\PasswordSave.dll
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\bin\Debug\netcoreapp2.2\PasswordGenerator.pdb
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\bin\Debug\netcoreapp2.2\PasswordSave.pdb
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\obj\Debug\netcoreapp2.2\ConsoleTools.csprojAssemblyReference.cache
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\obj\Debug\netcoreapp2.2\ConsoleTools.csproj.CoreCompileInputs.cache
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\obj\Debug\netcoreapp2.2\ConsoleTools.AssemblyInfoInputs.cache
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\obj\Debug\netcoreapp2.2\ConsoleTools.AssemblyInfo.cs
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\obj\Debug\netcoreapp2.2\ConsoleTools.csproj.CopyComplete
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\obj\Debug\netcoreapp2.2\ConsoleTools.dll
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\obj\Debug\netcoreapp2.2\ConsoleTools.pdb
