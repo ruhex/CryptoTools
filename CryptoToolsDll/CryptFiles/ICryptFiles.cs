@@ -4,8 +4,9 @@ using System.Text;
 
 namespace CryptFiles
 {
-    interface ICryptFiles
+    public interface ICryptFiles
     {
-        bool Crypt(byte[] _key);
+        void Encrypt(byte[] _key, string _fileName);
+        void Decrypt(byte[] _key, string _fileName);
     }
 }

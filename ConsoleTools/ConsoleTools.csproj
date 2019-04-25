@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CryptoToolsDll\CryptFiles\CryptFiles.csproj" />
     <ProjectReference Include="..\PasswordToolsDll\PasswordGenerator\PasswordGenerator.csproj" />
     <ProjectReference Include="..\PasswordToolsDll\PasswordSave\PasswordSave.csproj" />
   </ItemGroup>

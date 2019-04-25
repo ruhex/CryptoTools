@@ -8,11 +8,17 @@
     ".NETCoreApp,Version=v2.2": {
       "ConsoleTools/1.0.0": {
         "dependencies": {
+          "CryptFiles": "1.0.0",
           "PasswordGenerator": "1.0.0",
           "PasswordSave": "1.0.0"
         },
         "runtime": {
           "ConsoleTools.dll": {}
+        }
+      },
+      "CryptFiles/1.0.0": {
+        "runtime": {
+          "CryptFiles.dll": {}
         }
       },
       "PasswordGenerator/1.0.0": {
@@ -29,6 +35,11 @@
   },
   "libraries": {
     "ConsoleTools/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CryptFiles/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

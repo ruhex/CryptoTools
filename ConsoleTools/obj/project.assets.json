@@ -208,6 +208,16 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "CryptFiles/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/CryptFiles.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CryptFiles.dll": {}
+        }
+      },
       "PasswordGenerator/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -699,6 +709,11 @@
         "netstandard.library.nuspec"
       ]
     },
+    "CryptFiles/1.0.0": {
+      "type": "project",
+      "path": "../CryptoToolsDll/CryptFiles/CryptFiles.csproj",
+      "msbuildProject": "../CryptoToolsDll/CryptFiles/CryptFiles.csproj"
+    },
     "PasswordGenerator/1.0.0": {
       "type": "project",
       "path": "../PasswordToolsDll/PasswordGenerator/PasswordGenerator.csproj",
@@ -712,6 +727,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "CryptFiles >= 1.0.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "PasswordGenerator >= 1.0.0",
       "PasswordSave >= 1.0.0"
@@ -747,6 +763,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj": {
+              "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj"
+            },
             "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj": {
               "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj"
             },

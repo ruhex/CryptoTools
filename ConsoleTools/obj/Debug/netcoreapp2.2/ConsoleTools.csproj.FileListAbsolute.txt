@@ -14,3 +14,5 @@ C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\obj\Debug\netcoreapp2.2
 C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\obj\Debug\netcoreapp2.2\ConsoleTools.csproj.CopyComplete
 C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\obj\Debug\netcoreapp2.2\ConsoleTools.dll
 C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\obj\Debug\netcoreapp2.2\ConsoleTools.pdb
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\bin\Debug\netcoreapp2.2\CryptFiles.dll
+C:\Users\movchan_m\Source\Repos\CryptoTools\ConsoleTools\bin\Debug\netcoreapp2.2\CryptFiles.pdb

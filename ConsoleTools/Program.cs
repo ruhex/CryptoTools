@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using PasswordGenerator;
 using PasswordSave;
+using CryptFiles;
 
 namespace ConsoleTools
 {
@@ -9,7 +10,10 @@ namespace ConsoleTools
     {
         static void Main(string[] args)
         {
-            Init init = new Init(new PasswordGenerator.PasswordGenerator(8, true, true, false, false));
+            Init init = new Init(
+                new PasswordGenerator.PasswordGenerator(8, true, true, false, false),
+                new CryptFiles.CryptFiles()
+                );
 
 
             //ToolsMenu.massiv.Add(new ToolsMenu("Password generation", init._passwordGeneratior));
@@ -19,11 +23,11 @@ namespace ConsoleTools
             Console.WriteLine("Please select tool:");
             Console.WriteLine("");
             Console.WriteLine("1. Password generation");
+            Console.WriteLine("2. AES encrypt / decrypt files");
 
 
             try
             {
-
                 char _tool = Console.ReadKey().KeyChar;
                 switch (_tool)
                 {
@@ -32,6 +36,31 @@ namespace ConsoleTools
                         Console.WriteLine("------------------------------------");
                         Console.WriteLine(init._passwordGeneratior.GetPassword());
                         Console.WriteLine("------------------------------------");
+                        break;
+                    case (char)50:
+                        Console.Write("Please enter file name: ");
+                        string file_name = Console.ReadLine();
+
+                        Console.Write("Please enter password: ");
+                        string password = Console.ReadLine();
+
+                        Console.WriteLine("1. Encrypt file");
+                        Console.WriteLine("2. Decrypt file");
+
+                        char e = Console.ReadKey().KeyChar;
+
+                        switch (e)
+                        {
+                            case (char)49:
+                                Console.WriteLine($"Start encrypt file: {file_name}");
+                                init._cryptFiles.Encrypt(PasswordToByte(password), file_name);
+                                Console.WriteLine($"File - {file_name}, encrypted!");
+                                break;
+                            case (char)50:
+                                Console.WriteLine($"Start decrypt file: {file_name}");
+                                init._cryptFiles.Decrypt(PasswordToByte(password), file_name);
+                                break;
+                        }
                         break;
                 }
             }
@@ -53,12 +82,6 @@ namespace ConsoleTools
             //        Console.WriteLine("1");
             //        break;
             //}
-
-
-
-
-
-
             //Console.WriteLine(init._passwordGeneratior.GetPassword());
 
             Console.ReadKey();
@@ -70,15 +93,28 @@ namespace ConsoleTools
             return _passwordGeneratior.GetPassword();
         }
 
+        static byte[] PasswordToByte(string _passwd)
+        {
+            byte[] key = new byte[_passwd.Length];
+
+            for (int i = 0; i < _passwd.Length; i++)
+            {
+                key[i] = (byte)_passwd[i];
+            }
+            return key;
+        }
+
 
     }
 
     class Init
     {
         public IPasswordGenerator _passwordGeneratior;
-        public Init(IPasswordGenerator _passwordGeneratior)
+        public ICryptFiles _cryptFiles;
+        public Init(IPasswordGenerator _passwordGeneratior, ICryptFiles _cryptFiles)
         {
             this._passwordGeneratior = _passwordGeneratior;
+            this._cryptFiles = _cryptFiles;
         }
     }
 

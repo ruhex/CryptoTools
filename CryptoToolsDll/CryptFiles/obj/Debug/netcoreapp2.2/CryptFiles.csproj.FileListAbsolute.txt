@@ -1,0 +1,9 @@
+C:\Users\movchan_m\Source\Repos\CryptoTools\CryptoToolsDll\CryptFiles\bin\Debug\netcoreapp2.2\CryptFiles.deps.json
+C:\Users\movchan_m\Source\Repos\CryptoTools\CryptoToolsDll\CryptFiles\bin\Debug\netcoreapp2.2\CryptFiles.dll
+C:\Users\movchan_m\Source\Repos\CryptoTools\CryptoToolsDll\CryptFiles\bin\Debug\netcoreapp2.2\CryptFiles.pdb
+C:\Users\movchan_m\Source\Repos\CryptoTools\CryptoToolsDll\CryptFiles\obj\Debug\netcoreapp2.2\CryptFiles.csprojAssemblyReference.cache
+C:\Users\movchan_m\Source\Repos\CryptoTools\CryptoToolsDll\CryptFiles\obj\Debug\netcoreapp2.2\CryptFiles.csproj.CoreCompileInputs.cache
+C:\Users\movchan_m\Source\Repos\CryptoTools\CryptoToolsDll\CryptFiles\obj\Debug\netcoreapp2.2\CryptFiles.AssemblyInfoInputs.cache
+C:\Users\movchan_m\Source\Repos\CryptoTools\CryptoToolsDll\CryptFiles\obj\Debug\netcoreapp2.2\CryptFiles.AssemblyInfo.cs
+C:\Users\movchan_m\Source\Repos\CryptoTools\CryptoToolsDll\CryptFiles\obj\Debug\netcoreapp2.2\CryptFiles.dll
+C:\Users\movchan_m\Source\Repos\CryptoTools\CryptoToolsDll\CryptFiles\obj\Debug\netcoreapp2.2\CryptFiles.pdb

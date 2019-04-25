@@ -30,6 +30,9 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
+              "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj": {
+                "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj"
+              },
               "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj": {
                 "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj"
               },
@@ -37,6 +40,58 @@
                 "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordSave\\PasswordSave.csproj"
               }
             }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj",
+        "projectName": "CryptFiles",
+        "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj",
+        "packagesPath": "C:\\Users\\movchan_m\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\movchan_m\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
           }
         },
         "warningProperties": {
