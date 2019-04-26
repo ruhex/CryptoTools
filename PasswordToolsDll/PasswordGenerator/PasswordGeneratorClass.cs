@@ -15,23 +15,20 @@ namespace PasswordGenerator
         private bool Lower { get; set; }
         private bool Upper { get; set; }
         private bool SpecialSymbols { get; set; }
-        private bool AllSymbols { get; set; }
 
         public PasswordGenerator() { }
 
-        public PasswordGenerator(int _length, bool _all_symbols)
+        public PasswordGenerator(int _length)
         {
             this.Length = _length;
-            this.AllSymbols = _all_symbols;
         }
-        public PasswordGenerator(int _length, bool _number, bool _lower, bool _upper, bool _all_symbols, bool _special_symbols)
+        public PasswordGenerator(int _length, bool _number, bool _lower, bool _upper, bool _special_symbols)
         {
 
             this.Length = _length;
             this.Number = _number;
             this.Lower = _lower;
             this.Upper = _upper;
-            this.AllSymbols = _all_symbols;
             this.SpecialSymbols = _special_symbols;
         }
 
@@ -115,16 +112,7 @@ namespace PasswordGenerator
                     charArray.Add((char)i);
 
             if (this.SpecialSymbols)
-            {
-                //for (int i = 33; i <= 37; i++)
-                //    charArray.Add((char)i);
-                //for (int i = 33; i <= 47; i++)
-                //    charArray.Add((char)i);
-                //for (int i = 91; i <= 96; i++)
-                //    charArray.Add((char)i);
-                //for (int i = 123; i <= 125; i++)
-                //    charArray.Add((char)i);
-
+            {                
                 byte[] _chars = { 33, 35, 36, 37, 40, 41, 91, 93, 95, 123, 125 };
 
                 foreach (byte tmp in _chars)
@@ -133,16 +121,13 @@ namespace PasswordGenerator
                 }
             }
 
-            if (this.AllSymbols)
-                for (byte i = 32; i <= 126; i++)
-                    charArray.Add((char)i);
-
+            
             return charArray;
         }
 
         private bool CheckPassword(string _pass)
         {
-            bool[] controlTest = { this.Number, this.Upper, this.Lower, this.SpecialSymbols };
+            bool[] controlTest = { this.Number, this.Lower, this.Upper, this.SpecialSymbols };
             bool[] test = { false, false, false, false };
 
             List<char> massiv = new List<char>(_pass);
@@ -194,7 +179,6 @@ namespace PasswordGenerator
             else
                 return false;
 
-
         }
 
 
@@ -203,9 +187,9 @@ namespace PasswordGenerator
             return PassGen();
         }
 
-        public void SetAllSymbols(bool _all_symbols)
+        public void SetNumber(bool _number)
         {
-            this.AllSymbols = _all_symbols;
+            this.Number = _number;
         }
 
         public void SetLength(int _length)

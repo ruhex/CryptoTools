@@ -10,7 +10,7 @@ namespace PasswordGenerator
         void SetLength(int _length);
         void SetLower(bool _lower);
         void SetUpper(bool _upper);
-        void SetAllSymbols(bool _all_symbols);
+        void SetNumber(bool _number);
         void SetSpecialSymbols(bool _special_symbols);
     }
 }

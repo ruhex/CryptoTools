@@ -13,15 +13,13 @@ namespace ConsoleTools
         static void Main(string[] args)
         {
             Init init = new Init(
-                new PasswordGenerator.PasswordGenerator(8, true, true, true, false, true),
+                new PasswordGenerator.PasswordGenerator(8, true, true, true, true),
                 new CryptFiles.CryptFiles()
                 );
-
            
 
 
             //ToolsMenu.massiv.Add(new ToolsMenu("Password generation", init._passwordGeneratior));
-
 
 
             Console.WriteLine("Please select tool:");
@@ -36,42 +34,13 @@ namespace ConsoleTools
                 switch (_tool)
                 {
                     case (char)49:
-                        Console.WriteLine();
-                        Console.WriteLine("------------------------------------");
-                        Console.WriteLine(init._passwordGeneratior.GetPassword());
-
-                        for (int i = 0; i < 10000; i++)
-                        {
-                            Console.WriteLine(init._passwordGeneratior.GetPassword());
-                        }
-
-
-                        Console.WriteLine("------------------------------------");
+                        // PASSWORD FUNCTION
+                        GetPass(init._passwordGeneratior);
                         break;
+
                     case (char)50:
-                        Console.Write("Please enter file name: ");
-                        string file_name = Console.ReadLine();
-
-                        Console.Write("Please enter password: ");
-                        string password = Console.ReadLine();
-
-                        Console.WriteLine("1. Encrypt file");
-                        Console.WriteLine("2. Decrypt file");
-
-                        char e = Console.ReadKey().KeyChar;
-
-                        switch (e)
-                        {
-                            case (char)49:
-                                Console.WriteLine($"Start encrypt file: {file_name}");
-                                init._cryptFiles.Encrypt(PasswordToByte(password), file_name);
-                                Console.WriteLine($"File - {file_name}, encrypted!");
-                                break;
-                            case (char)50:
-                                Console.WriteLine($"Start decrypt file: {file_name}");
-                                init._cryptFiles.Decrypt(PasswordToByte(password), file_name);
-                                break;
-                        }
+                        // CRYPTO FUNCTION
+                        CryptoFile(init._cryptFiles);
                         break;
                 }
             }
@@ -99,15 +68,96 @@ namespace ConsoleTools
 
         }
 
-
-        
-
-
-
-
-        static string GetPass(IPasswordGenerator _passwordGeneratior)
+        static void CryptoFile(ICryptFiles _cryptFiles)
         {
-            return _passwordGeneratior.GetPassword();
+            Console.Write("Please enter file name: ");
+            string file_name = Console.ReadLine();
+
+            Console.Write("Please enter password: ");
+            string password = Console.ReadLine();
+
+            Console.WriteLine("1. Encrypt file");
+            Console.WriteLine("2. Decrypt file");
+
+            char e = Console.ReadKey().KeyChar;
+
+            switch (e)
+            {
+                case (char)49:
+                    Console.WriteLine($"Start encrypt file: {file_name}");
+                    _cryptFiles.Encrypt(PasswordToByte(password), file_name);
+                    Console.WriteLine($"File - {file_name}, encrypted!");
+                    break;
+                case (char)50:
+                    Console.WriteLine($"Start decrypt file: {file_name}");
+                    _cryptFiles.Decrypt(PasswordToByte(password), file_name);
+                    break;
+            }
+        }
+        
+        static void GetPass(IPasswordGenerator _passwordGenerator)
+        {
+
+            Console.Write("Password length (default 8)?: ");
+            int count;
+            try
+            {
+                count = Convert.ToInt32(Console.ReadLine());
+                _passwordGenerator.SetLength(count);
+            }
+            catch
+            {
+                _passwordGenerator.SetLength(8);
+            }
+
+            Console.WriteLine("");
+
+            Console.Write("Use numbers (default yes)?: ");
+            string useNumber = Console.ReadLine();
+            if (useNumber == "no")
+                _passwordGenerator.SetNumber(false);
+            else
+                _passwordGenerator.SetNumber(true);
+            Console.WriteLine("");
+
+            Console.Write("Use lower char (default yes)?: ");
+            string useLower = Console.ReadLine();
+            if (useLower == "no")
+                _passwordGenerator.SetLower(false);
+            else
+                _passwordGenerator.SetLower(true);
+            Console.WriteLine("");
+
+            Console.Write("Use upper char (default yes)?: ");
+            string useUpper = Console.ReadLine();
+            if (useUpper == "no")
+                _passwordGenerator.SetUpper(false);
+            else
+                _passwordGenerator.SetUpper(true);
+            Console.WriteLine("");
+
+            Console.Write("Use special symbols  (default yes)?: ");
+            string useSpecialSymbols = Console.ReadLine();
+            if (useSpecialSymbols == "no")
+                _passwordGenerator.SetSpecialSymbols(false);
+            else
+                _passwordGenerator.SetSpecialSymbols(true);
+            Console.WriteLine("");
+
+
+
+
+            Console.WriteLine("");
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine(_passwordGenerator.GetPassword());
+
+            for (int i = 0; i < 1000; i++)
+            {
+                Console.WriteLine(_passwordGenerator.GetPassword());
+            }
+
+
+            Console.WriteLine("------------------------------------");
         }
 
         static byte[] PasswordToByte(string _passwd)
@@ -128,6 +178,8 @@ namespace ConsoleTools
     {
         public IPasswordGenerator _passwordGeneratior;
         public ICryptFiles _cryptFiles;
+
+        public Init() { }
         public Init(IPasswordGenerator _passwordGeneratior, ICryptFiles _cryptFiles)
         {
             this._passwordGeneratior = _passwordGeneratior;
