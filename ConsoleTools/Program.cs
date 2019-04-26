@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.ObjectModel;
 using PasswordGenerator;
 using PasswordSave;
@@ -12,7 +13,7 @@ namespace ConsoleTools
         static void Main(string[] args)
         {
             Init init = new Init(
-                new PasswordGenerator.PasswordGenerator(8, true, true, false, false),
+                new PasswordGenerator.PasswordGenerator(8, true, true, true, false, true),
                 new CryptFiles.CryptFiles()
                 );
 
@@ -39,9 +40,9 @@ namespace ConsoleTools
                         Console.WriteLine("------------------------------------");
                         Console.WriteLine(init._passwordGeneratior.GetPassword());
 
-                        for (int i = 0; i < 1000; i++)
+                        for (int i = 0; i < 10000; i++)
                         {
-                            Console.WriteLine(PassTest(init._passwordGeneratior.GetPassword()));
+                            Console.WriteLine(init._passwordGeneratior.GetPassword());
                         }
 
 
@@ -99,50 +100,7 @@ namespace ConsoleTools
         }
 
 
-        static string PassTest(string _pass)
-        {
-            char test = '0';
-            int y = 0;
-            List<char> chekChar = new List<char>();
-            List<char> chekPass = new List<char>();
-
-            foreach (char tmp in _pass)
-                chekPass.Add(tmp);
-
-            for (byte i = 48; i <= 57; i++)
-                test += chekPass.Find(delegate (char _char) { return _char == (char)i; });
-            if (test != '0')
-                y += 1;
-            test = '0';
-
-            for (byte i = 65; i <= 90; i++)
-                test += chekPass.Find(delegate (char _char) { return _char == (char)i; });
-            if (test != '0')
-                y += 1;
-            test = '0';
-
-            for (byte i = 97; i <= 122; i++)
-                test += chekPass.Find(delegate (char _char) { return _char == (char)i; });
-            if (test != '0')
-                y += 1;
-            test = '0';
-
-            byte[] _chars = { 33, 35, 36, 37, 40, 41, 91, 93, 95, 123, 125 };
-
-            foreach (byte tmp in _chars)
-            {
-                test += chekPass.Find(delegate (char _char) { return _char == (char)tmp; });
-                if (test != '0')
-                    y += 1;
-            }
-
-            if (y == 4)
-                return "ok " + _pass;
-            else
-                return _pass;
-
-
-        }
+        
 
 
 
