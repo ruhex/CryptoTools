@@ -70,8 +70,8 @@ namespace ConsoleTools
 
         static void CryptoFile(ICryptFiles _cryptFiles)
         {
-            Console.Write("Please enter file name: ");
-            string file_name = Console.ReadLine();
+            Console.Write("Please enter full name directory with files: ");
+            string directory_name = Console.ReadLine();
 
             Console.Write("Please enter password: ");
             string password = Console.ReadLine();
@@ -84,13 +84,14 @@ namespace ConsoleTools
             switch (e)
             {
                 case (char)49:
-                    Console.WriteLine($"Start encrypt file: {file_name}");
-                    _cryptFiles.Encrypt(PasswordToByte(password), file_name);
-                    Console.WriteLine($"File - {file_name}, encrypted!");
+                    //Console.WriteLine($"Start encrypt file: {file_name}");
+                    Console.WriteLine($"Start encrypt");
+                    _cryptFiles.Encrypt(PasswordToByte(password), _cryptFiles.GetFiles(@directory_name));
+                    //Console.WriteLine($"File - {file_name}, encrypted!");
                     break;
                 case (char)50:
-                    Console.WriteLine($"Start decrypt file: {file_name}");
-                    _cryptFiles.Decrypt(PasswordToByte(password), file_name);
+                    //Console.WriteLine($"Start decrypt file: {file_name}");
+                    _cryptFiles.Decrypt(PasswordToByte(password), _cryptFiles.GetFiles(@directory_name));
                     break;
             }
         }

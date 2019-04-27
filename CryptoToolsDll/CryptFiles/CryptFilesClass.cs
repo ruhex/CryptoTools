@@ -15,14 +15,18 @@ namespace CryptFiles
 
         }
 
-        public void Encrypt(byte[] _key, string _fileName)
+        public void Encrypt(byte[] _key, string[] _files)
         {
-            WriteFile(AESEncryptData(ReadFile(_fileName), AESGenEncryptKey(_key)), $"{_fileName}_encrypt");
+            foreach (string tmp in _files)
+                WriteFile(AESEncryptData(ReadFile(tmp), AESGenEncryptKey(_key)), $"{tmp}_encrypt");
         }
 
-        public void Decrypt(byte[] _key, string _fileName)
+        public void Decrypt(byte[] _key, string[] _files)
         {
-            WriteFile(AESDecryptData(ReadFile(_fileName), AESGenEncryptKey(_key)), $"{_fileName}_decrypt");
+            foreach (string tmp in _files)
+                WriteFile(AESDecryptData(ReadFile(tmp), AESGenEncryptKey(_key)), $"{tmp}");
+
+
         }
 
         byte[] AESEncryptData(byte[] _data, byte[] _key)
@@ -95,6 +99,20 @@ namespace CryptFiles
                 }
             }
             return decrypt;
+        }
+
+        public string[] GetFiles(string _path)
+        {
+            
+            FileInfo[] fileInfo = new DirectoryInfo(_path).GetFiles();
+
+            List<string> massiv = new List<string>();
+
+            foreach (FileInfo tmp in fileInfo)
+                massiv.Add(tmp.FullName);
+
+            return massiv.ToArray();
+
         }
 
         private byte[] ReadFile(string _fileName)

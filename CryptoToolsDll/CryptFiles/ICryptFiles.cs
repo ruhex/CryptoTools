@@ -6,7 +6,8 @@ namespace CryptFiles
 {
     public interface ICryptFiles
     {
-        void Encrypt(byte[] _key, string _fileName);
-        void Decrypt(byte[] _key, string _fileName);
+        void Encrypt(byte[] _key, string[] _files);
+        void Decrypt(byte[] _key, string[] _files);
+        string[] GetFiles(string _path);
     }
 }

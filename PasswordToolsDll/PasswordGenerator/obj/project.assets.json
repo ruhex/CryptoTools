@@ -686,23 +686,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\movchan_m\\.nuget\\packages\\": {},
+    "C:\\Users\\kenny\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj",
+      "projectUniqueName": "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj",
       "projectName": "PasswordGenerator",
-      "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj",
-      "packagesPath": "C:\\Users\\movchan_m\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\obj\\",
+      "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj",
+      "packagesPath": "C:\\Users\\kenny\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\movchan_m\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kenny\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
