@@ -56,6 +56,7 @@ namespace ConsoleTools
             for (byte i = 0; i < ToolsMenu.massiv.Count; i++)
                 Console.WriteLine($"{i} {ToolsMenu.massiv[i].Title}");
 
+            #region oldMenu
             //switch(ToolsMenu.massiv[0].Obj.GetType())
             //{
             //    case Type.GetType(""):
@@ -63,6 +64,7 @@ namespace ConsoleTools
             //        break;
             //}
             //Console.WriteLine(init._passwordGeneratior.GetPassword());
+            #endregion
 
             Console.ReadKey();
 
@@ -86,7 +88,7 @@ namespace ConsoleTools
                 case (char)49:
                     //Console.WriteLine($"Start encrypt file: {file_name}");
                     Console.WriteLine($"Start encrypt");
-                    _cryptFiles.Encrypt(PasswordToByte(password), _cryptFiles.GetFiles(@directory_name));
+                    _cryptFiles.EncryptAsync(PasswordToByte(password), _cryptFiles.GetFiles(@directory_name));
                     //Console.WriteLine($"File - {file_name}, encrypted!");
                     break;
                 case (char)50:

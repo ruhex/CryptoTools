@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
+using System.Threading.Tasks;
 
 namespace CryptFiles
 {
@@ -15,25 +16,25 @@ namespace CryptFiles
 
         }
 
-        public void Encrypt(byte[] _key, string[] _files)
+        public void EncryptAsync(byte[] _key, string[] _files)
         {
             foreach (string tmp in _files)
-                WriteFile(AESEncryptData(ReadFile(tmp), AESGenEncryptKey(_key)), $"{tmp}_encrypt");
+                WriteFileAsync(AESEncryptDataAsync(ReadFile(tmp), AESGenEncryptKey(_key)).Result, $"{tmp}_encrypt");
+            //WriteFile(AESEncryptData(ReadFile(tmp), AESGenEncryptKey(_key)), $"{tmp}_encrypt");
         }
 
         public void Decrypt(byte[] _key, string[] _files)
         {
             foreach (string tmp in _files)
                 WriteFile(AESDecryptData(ReadFile(tmp), AESGenEncryptKey(_key)), $"{tmp}");
-
-
         }
-
-        byte[] AESEncryptData(byte[] _data, byte[] _key)
+        private async Task<byte[]> AESEncryptDataAsync(byte[] _data, byte[] _key)
+        {
+            return await Task.Run(() => AESEncryptData(_data, _key));
+        }
+        private byte[] AESEncryptData(byte[] _data, byte[] _key)
         {
             byte[] encrypted, tmp;
-
-
             using (Aes _aes = Aes.Create())
             {
                 byte[] iv;
@@ -50,7 +51,7 @@ namespace CryptFiles
                 {
                     using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
                     {
-                        csEncrypt.Write(_data, 0, _data.Length);
+                        csEncrypt.WriteAsync(_data, 0, _data.Length);
 
                     }
                     encrypted = msEncrypt.ToArray();
@@ -64,6 +65,8 @@ namespace CryptFiles
             }
             return tmp;
         }
+
+
 
         byte[] AESDecryptData(byte[] _data, byte[] _key)
         {
@@ -125,7 +128,14 @@ namespace CryptFiles
             fileStream.Close();
             return test;
         }
-        void WriteFile(byte[] _data, string _fileName)
+
+
+        private async Task WriteFileAsync(byte[] _data, string _fileName)
+        {
+            await Task.Run(() => WriteFile(_data, _fileName));
+        }
+
+        private void WriteFile(byte[] _data, string _fileName)
         {
             FileStream new_file = new FileStream($"{_fileName}", FileMode.Create);
 
