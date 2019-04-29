@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace CryptFiles
 {
     public class CryptFiles : ICryptFiles
     {
+        Stopwatch sw;
         private string Name { get; set; }
         private byte[] CryptKey { get; set; }
         public CryptFiles() { }
@@ -118,6 +120,12 @@ namespace CryptFiles
 
         }
 
+
+        private async Task<byte[]> ReadFileAsync(string _fileName)
+        {
+            return await Task.Run(() => ReadFile(_fileName));
+        }
+
         private byte[] ReadFile(string _fileName)
         {
             FileStream fileStream = new FileStream(_fileName, FileMode.Open);
@@ -146,6 +154,11 @@ namespace CryptFiles
         private byte[] AESGenEncryptKey(byte[] _password)
         {
             return SHA256.Create().ComputeHash(_password);
+        }
+
+        ~CryptFiles()
+        {
+            sw.Stop();
         }
 
     }

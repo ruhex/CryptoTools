@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kenny\\source\\repos\\cryptotools\\ConsoleTools\\ConsoleTools.csproj": {}
+    "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\ConsoleTools\\ConsoleTools.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kenny\\source\\repos\\cryptotools\\ConsoleTools\\ConsoleTools.csproj": {
+    "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\ConsoleTools\\ConsoleTools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kenny\\source\\repos\\cryptotools\\ConsoleTools\\ConsoleTools.csproj",
+        "projectUniqueName": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\ConsoleTools\\ConsoleTools.csproj",
         "projectName": "ConsoleTools",
-        "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\ConsoleTools\\ConsoleTools.csproj",
-        "packagesPath": "C:\\Users\\kenny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\ConsoleTools\\obj\\",
+        "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\ConsoleTools\\ConsoleTools.csproj",
+        "packagesPath": "C:\\Users\\movchan_m\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\ConsoleTools\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\kenny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\movchan_m\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,14 +30,14 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj": {
-                "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj"
+              "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj": {
+                "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj"
               },
-              "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj": {
-                "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj"
+              "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj": {
+                "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj"
               },
-              "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordSave\\PasswordSave.csproj": {
-                "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordSave\\PasswordSave.csproj"
+              "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordSave\\PasswordSave.csproj": {
+                "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordSave\\PasswordSave.csproj"
               }
             }
           }
@@ -66,20 +66,20 @@
         }
       }
     },
-    "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj": {
+    "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj",
+        "projectUniqueName": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj",
         "projectName": "CryptFiles",
-        "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj",
-        "packagesPath": "C:\\Users\\kenny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\obj\\",
+        "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj",
+        "packagesPath": "C:\\Users\\movchan_m\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\CryptoToolsDll\\CryptFiles\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\kenny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\movchan_m\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -118,20 +118,20 @@
         }
       }
     },
-    "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj": {
+    "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj",
+        "projectUniqueName": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj",
         "projectName": "PasswordGenerator",
-        "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj",
-        "packagesPath": "C:\\Users\\kenny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordGenerator\\obj\\",
+        "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj",
+        "packagesPath": "C:\\Users\\movchan_m\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordGenerator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\kenny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\movchan_m\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -170,20 +170,20 @@
         }
       }
     },
-    "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordSave\\PasswordSave.csproj": {
+    "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordSave\\PasswordSave.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordSave\\PasswordSave.csproj",
+        "projectUniqueName": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordSave\\PasswordSave.csproj",
         "projectName": "PasswordSave",
-        "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordSave\\PasswordSave.csproj",
-        "packagesPath": "C:\\Users\\kenny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordSave\\obj\\",
+        "projectPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordSave\\PasswordSave.csproj",
+        "packagesPath": "C:\\Users\\movchan_m\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\movchan_m\\Source\\Repos\\CryptoTools\\PasswordToolsDll\\PasswordSave\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\kenny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\movchan_m\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
