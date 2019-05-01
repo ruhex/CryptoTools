@@ -18,15 +18,25 @@ namespace CryptFiles
 
         public void EncryptAsync(byte[] _key, string[] _files)
         {
+            AESEncryptFileAsync(@"D:\test\ww\_NJplHNvL8M.jpg", AESGenEncryptKey(_key));
             foreach (string tmp in _files)
-                WriteFileAsync(AESEncryptDataAsync(ReadFile(tmp), AESGenEncryptKey(_key)).Result, $"{tmp}_encrypt");
-            //WriteFile(AESEncryptData(ReadFile(tmp), AESGenEncryptKey(_key)), $"{tmp}_encrypt");
+            {
+                //AESEncryptFileAsync(tmp, AESGenEncryptKey(_key));
+                //WriteFileAsync(AESEncryptDataAsync(ReadFile(tmp), AESGenEncryptKey(_key)).Result, $"{tmp}_encrypt");
+                //WriteFile(AESEncryptData(ReadFile(tmp), AESGenEncryptKey(_key)), $"{tmp}_encrypt");
+            }
+
         }
 
         public void Decrypt(byte[] _key, string[] _files)
         {
+            AESDecryptFile(@"D:\test\ww\_NJplHNvL8M.jpg", AESGenEncryptKey(_key));
             foreach (string tmp in _files)
-                WriteFile(AESDecryptData(ReadFile(tmp), AESGenEncryptKey(_key)), $"{tmp}");
+            {
+               // AESDecryptFile(tmp, AESGenEncryptKey(_key));
+                //WriteFile(AESDecryptData(ReadFile(tmp), AESGenEncryptKey(_key)), $"{tmp}");
+            }
+
         }
         private async Task<byte[]> AESEncryptDataAsync(byte[] _data, byte[] _key)
         {
@@ -66,9 +76,84 @@ namespace CryptFiles
             return tmp;
         }
 
+        private void WriteIV(byte[] _iv, string _fileName)
+        {
+            using (FileStream writeStream = File.Create($"{_fileName}.iv"))
+            {
+                writeStream.Write(_iv);
+            }
+        }
 
+        private byte[] ReadIV(string _fileName)
+        {
+            using (FileStream readStream = File.Open($"{_fileName}.iv", FileMode.Open))
+            {
+                byte[] data = new byte[readStream.Length];
+                readStream.Read(data, 0, data.Length);
+                readStream.Close();
+                return data;
+            }
+        }
+        private async Task AESEncryptFileAsync(string _fileName, byte[] _key)
+        {
+            await Task.Run(() => AESEncryptFile(_fileName, _key));
+        }
+        private async Task AESEncryptFile(string _fileName, byte[] _key)
+        {
+            using (Aes _aes = Aes.Create())
+            {
+                byte[] iv;
+                _aes.KeySize = 256;
+                _aes.Mode = CipherMode.CBC;
 
-        byte[] AESDecryptData(byte[] _data, byte[] _key)
+                _aes.Key = _key;
+                _aes.GenerateIV();
+                iv = _aes.IV;
+                WriteIV(iv, _fileName);
+                ICryptoTransform encryptor = _aes.CreateEncryptor(_aes.Key, _aes.IV);
+
+                using (FileStream SourceStream = File.Create($"{_fileName}.encrypt"))
+                {
+                    using (CryptoStream csEncrypt = new CryptoStream(SourceStream, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (FileStream DestinationStream = File.Open(_fileName, FileMode.Open))
+                        {
+                            DestinationStream.CopyTo(csEncrypt);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        private void AESDecryptFile(string _fileName, byte[] _key)
+        {
+            byte[] iv = ReadIV(_fileName);
+
+            using (Aes _aes = Aes.Create())
+            {
+                _aes.KeySize = 256;
+                _aes.Mode = CipherMode.CBC;
+
+                _aes.Key = _key;
+                _aes.IV = iv;
+
+                ICryptoTransform decryptor = _aes.CreateDecryptor(_aes.Key, _aes.IV);
+
+                using (FileStream DestinationStream = File.Open($"{ _fileName}.encrypt", FileMode.Open))
+                {
+                    using (CryptoStream csDecrypt = new CryptoStream(DestinationStream, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (FileStream SourceStream = File.Create($"{_fileName}"))
+                        {
+                            csDecrypt.CopyTo(SourceStream);
+                        }
+                    }
+                }
+            }
+        }
+
+        private byte[] AESDecryptData(byte[] _data, byte[] _key)
         {
             byte[] decrypt;
             List<byte> tmp_list = new List<byte>(_data);
@@ -104,18 +189,17 @@ namespace CryptFiles
             return decrypt;
         }
 
+        private string GetFileName(string _file)
+        {
+            return Path.GetFileNameWithoutExtension(_file);
+        }
         public string[] GetFiles(string _path)
         {
-            
-            FileInfo[] fileInfo = new DirectoryInfo(_path).GetFiles();
-
             List<string> massiv = new List<string>();
-
-            foreach (FileInfo tmp in fileInfo)
+            FileInfo[] files = new DirectoryInfo(_path).GetFiles();
+            foreach (FileInfo tmp in files)
                 massiv.Add(tmp.FullName);
-
             return massiv.ToArray();
-
         }
 
         private byte[] ReadFile(string _fileName)
