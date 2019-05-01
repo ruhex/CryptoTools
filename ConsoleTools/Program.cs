@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.ObjectModel;
 using PasswordGenerator;
-using PasswordSave;
 using Crypt;
 using System.Collections.Generic;
 using System.IO;
