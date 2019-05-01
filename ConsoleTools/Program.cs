@@ -3,8 +3,9 @@ using System.Linq;
 using System.Collections.ObjectModel;
 using PasswordGenerator;
 using PasswordSave;
-using CryptFiles;
+using Crypt;
 using System.Collections.Generic;
+using System.IO;
 
 namespace ConsoleTools
 {
@@ -14,7 +15,7 @@ namespace ConsoleTools
         {
             Init init = new Init(
                 new PasswordGenerator.PasswordGenerator(8, true, true, true, true),
-                new CryptFiles.CryptFiles()
+                new CryptFile()
                 );
            
 
@@ -70,7 +71,7 @@ namespace ConsoleTools
 
         }
 
-        static void CryptoFile(ICryptFiles _cryptFiles)
+        static void CryptoFile(ICrypt _cryptFiles)
         {
             Console.Write("Please enter full name directory with files: ");
             string directory_name = Console.ReadLine();
@@ -88,12 +89,12 @@ namespace ConsoleTools
                 case (char)49:
                     //Console.WriteLine($"Start encrypt file: {file_name}");
                     Console.WriteLine($"Start encrypt");
-                    _cryptFiles.EncryptAsync(PasswordToByte(password), _cryptFiles.GetFiles(@directory_name));
+                    _cryptFiles.EncryptAsync(PasswordToByte(password), GetFiles(@directory_name));
                     //Console.WriteLine($"File - {file_name}, encrypted!");
                     break;
                 case (char)50:
                     //Console.WriteLine($"Start decrypt file: {file_name}");
-                    _cryptFiles.Decrypt(PasswordToByte(password), _cryptFiles.GetFiles(@directory_name));
+                    _cryptFiles.DecryptAsync(PasswordToByte(password), GetFiles(@directory_name));
                     break;
             }
             Console.WriteLine("----");
@@ -176,16 +177,25 @@ namespace ConsoleTools
             return key;
         }
 
+        static string[] GetFiles(string _path)
+        {
+            List<string> massiv = new List<string>();
+            FileInfo[] files = new DirectoryInfo(_path).GetFiles();
+            foreach (FileInfo tmp in files)
+                massiv.Add(tmp.FullName);
+            return massiv.ToArray();
+        }
+
 
     }
 
     class Init
     {
         public IPasswordGenerator _passwordGeneratior;
-        public ICryptFiles _cryptFiles;
+        public ICrypt _cryptFiles;
 
         public Init() { }
-        public Init(IPasswordGenerator _passwordGeneratior, ICryptFiles _cryptFiles)
+        public Init(IPasswordGenerator _passwordGeneratior, ICrypt _cryptFiles)
         {
             this._passwordGeneratior = _passwordGeneratior;
             this._cryptFiles = _cryptFiles;

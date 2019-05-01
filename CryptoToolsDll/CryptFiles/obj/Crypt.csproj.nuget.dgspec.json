@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj": {}
+    "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\Crypt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj": {
+    "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\Crypt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj",
+        "projectUniqueName": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\Crypt.csproj",
         "projectName": "Crypt",
-        "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj",
+        "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\Crypt.csproj",
         "packagesPath": "C:\\Users\\kenny\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\obj\\",
         "projectStyle": "PackageReference",

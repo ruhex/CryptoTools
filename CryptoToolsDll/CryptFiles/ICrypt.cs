@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace CryptFiles
+namespace Crypt
 {
-    public interface ICryptFiles
+    public interface ICrypt
     {
         void EncryptAsync(byte[] _key, string[] _files);
-        void Decrypt(byte[] _key, string[] _files);
-        string[] GetFiles(string _path);
+        void DecryptAsync(byte[] _key, string[] _files);
     }
 }

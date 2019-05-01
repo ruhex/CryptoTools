@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj": {
-                "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj"
+              "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\Crypt.csproj": {
+                "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\Crypt.csproj"
               },
               "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj": {
                 "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\PasswordToolsDll\\PasswordGenerator\\PasswordGenerator.csproj"
@@ -66,12 +66,12 @@
         }
       }
     },
-    "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj": {
+    "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\Crypt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj",
-        "projectName": "CryptFiles",
-        "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\CryptFiles.csproj",
+        "projectUniqueName": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\Crypt.csproj",
+        "projectName": "Crypt",
+        "projectPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\Crypt.csproj",
         "packagesPath": "C:\\Users\\kenny\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\kenny\\source\\repos\\cryptotools\\CryptoToolsDll\\CryptFiles\\obj\\",
         "projectStyle": "PackageReference",
