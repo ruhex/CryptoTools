@@ -96,6 +96,8 @@ namespace ConsoleTools
                     _cryptFiles.Decrypt(PasswordToByte(password), _cryptFiles.GetFiles(@directory_name));
                     break;
             }
+            Console.WriteLine("----");
+            Console.ReadKey();
         }
         
         static void GetPass(IPasswordGenerator _passwordGenerator)
