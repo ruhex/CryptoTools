@@ -1,38 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace CryptFiles
+namespace Crypt
 {
-    public class CryptFiles : ICryptFiles
+    class CryptBytes : Crypt
     {
+<<<<<<< HEAD:CryptoToolsDll/CryptFiles/CryptFilesClass.cs
         Stopwatch sw;
         private string Name { get; set; }
         private byte[] CryptKey { get; set; }
         public CryptFiles() { }
         public CryptFiles(byte[] _cryptKey)
+=======
+        public CryptBytes() { }
+        public CryptBytes(byte[] _cryptKey) { }
+
+        public override void EncryptAsync(byte[] _key, string[] _files)
+>>>>>>> async:CryptoToolsDll/CryptFiles/CryptBytes.cs
         {
 
         }
 
-        public void EncryptAsync(byte[] _key, string[] _files)
+        public override void DecryptAsync(byte[] _key, string[] _files)
         {
-            foreach (string tmp in _files)
-                WriteFileAsync(AESEncryptDataAsync(ReadFile(tmp), AESGenEncryptKey(_key)).Result, $"{tmp}_encrypt");
-            //WriteFile(AESEncryptData(ReadFile(tmp), AESGenEncryptKey(_key)), $"{tmp}_encrypt");
+
         }
 
-        public void Decrypt(byte[] _key, string[] _files)
-        {
-            foreach (string tmp in _files)
-                WriteFile(AESDecryptData(ReadFile(tmp), AESGenEncryptKey(_key)), $"{tmp}");
-        }
         private async Task<byte[]> AESEncryptDataAsync(byte[] _data, byte[] _key)
         {
             return await Task.Run(() => AESEncryptData(_data, _key));
+        }
+        private async Task<byte[]> AESDecryptDataAsync(byte[] _data, byte[] _key)
+        {
+            return await Task.Run(() => AESDecryptData(_data, _key));
         }
         private byte[] AESEncryptData(byte[] _data, byte[] _key)
         {
@@ -66,11 +69,8 @@ namespace CryptFiles
 
             }
             return tmp;
-        }
-
-
-
-        byte[] AESDecryptData(byte[] _data, byte[] _key)
+        }        
+        private byte[] AESDecryptData(byte[] _data, byte[] _key)
         {
             byte[] decrypt;
             List<byte> tmp_list = new List<byte>(_data);
@@ -105,6 +105,7 @@ namespace CryptFiles
             }
             return decrypt;
         }
+<<<<<<< HEAD:CryptoToolsDll/CryptFiles/CryptFilesClass.cs
 
         public string[] GetFiles(string _path)
         {
@@ -161,5 +162,7 @@ namespace CryptFiles
             sw.Stop();
         }
 
+=======
+>>>>>>> async:CryptoToolsDll/CryptFiles/CryptBytes.cs
     }
 }
